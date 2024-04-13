@@ -5,6 +5,7 @@ from count import process_image  # Make sure this import is correct
 
 app = Flask(__name__)
 app = Flask(__name__, static_folder='static')
+web: gunicorn app:app
 
 
 # Configuration for file upload and storage directories
